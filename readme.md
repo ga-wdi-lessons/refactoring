@@ -11,6 +11,8 @@ Refactoring is the process of changing existing code without changing what it do
 
 Today you'll be refactoring code you've already written. The code functions. It may not do exactly what you'd originally intended to do, but it functions.
 
+**Refactoring != Fixing** 
+
 **Challenge yourself to not change what your code does!** This will be really hard to avoid. But when you start changing the result of your code, it's a very slippery slope.
 
 In the Industry, there will be many times when changing what the code does can break all sorts of things. Forcing yourself to stay within the scope of existing code will be important.
@@ -163,7 +165,4 @@ $(document).ready(function(){ var game = {
 ```
 
 Solution: Indent your code, and keep things consistent! In Atom, if you "Select All" (Command + A) and go to Edit > Lines > Autoindent, it pretties everything up for you.
-
-## References
-
 
