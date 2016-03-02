@@ -17,7 +17,7 @@ Today you'll be refactoring code you've already written. The code functions. It 
 
 In the Industry, there will be many times when changing what the code does can break all sorts of things. Forcing yourself to stay within the scope of existing code will be important.
 
-## Code Smells
+## Always Sniff Your Code
 
 A "code smell" is a pattern in code that allows the code to function, but is not good practice.
 
@@ -30,26 +30,52 @@ function sayHiToAlice(){
   alert("Hi, Alice!");
 }
 
-function sayHiToBob(){
-  alert("Hi, Bob!");
+function sayHelloToBob(){
+  alert("Hello, Bob!");
 }
 
-function sayHiToCarol(){
-  alert("Hi, Carol!");
+function sayBonjourToCarol(){
+  alert("Bonjour, Carol!");
 }
 
-function sayHiToDavid(){
-  alert("Hi, David!");
+function sayBuenosDiasToDavid(){
+  alert("Buenos Dias, David!");
 }
+sayHiToAlice();
+sayHelloToBob();
+sayBonjourToCarol();
+sayBuenosDiasToDavid();
 ```
 
-Solution: **"Extract"** these lines into their own function.
+Solution: **"Extract"** these lines into their own function:
+
+```js
+var people = [
+  ["Hi", "Alice"],
+  ["Hello", "Bob"],
+  ["Bonjour", "Carol"],
+  ["Buenos Dias", "David"]
+];
+function greet(greeting, name){
+  alert(greeting + ", " + name + "!");
+}
+people.forEach(function(person){
+  greet(person[0], person[1]);
+});
+```
 
 ---
 
 ### Do several variable names or function names share the same word?
 
-Example: `gameCards`, `gamePlayers`, `gameHands`, `gameScore`
+Example: 
+
+```js
+var gameCards = [];
+var gamePlayers = [];
+var gameHands = [];
+var gameScore = 0;
+```
 
 Solution: The repeating word should probably be its own object.
 
@@ -132,13 +158,13 @@ Global variables are never *garbage-collected*. This means they can seriously sl
 Example:
 
 ```js
-alert("Here's a really important piece of information: " + myvariable);
+var foo = ((x + n) / y);
 ```
 
 Solution: Name it something better! There's not really any downside to giving variables and functions longer names if necessary
 
 ```js
-alert("Here's a really important piece of information: " + secretMessageFromPresident);
+var averageScore = ((sumOfStudentQuizScores + sumOfStudentHWScores) / numStudents);
 ```
 
 ---
@@ -155,10 +181,10 @@ Example:
 
 ```js
 $(document).ready(function(){ var game = {
-  title: "Checkers", players: []
-    }function playGame()
+title: "Checkers", players: []
+}function playGame()
 {
-  alert("You're playing checkers!");
+alert("You're playing checkers!");
 }
 }
 )
@@ -166,3 +192,14 @@ $(document).ready(function(){ var game = {
 
 Solution: Indent your code, and keep things consistent! In Atom, if you "Select All" (Command + A) and go to Edit > Lines > Autoindent, it pretties everything up for you.
 
+```js
+$(document).ready(function(){
+  var game = {
+    title: "Checkers",
+    players: []
+  }
+  function playGame(){
+    alert("You're playing checkers!");
+  }
+});
+```
