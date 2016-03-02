@@ -203,3 +203,11 @@ $(document).ready(function(){
   }
 });
 ```
+
+## Suggested Steps
+
+Checkout a new branch called something like `refactor`.
+
+- Commit 1: Add comments where you notice code smell patterns.
+- Commit 2: Indent and format your code.
+- Commits 3 and beyond: Smell-by-smell, respond to your comments.
