@@ -16,7 +16,7 @@ In the Industry, there will be many times when changing what the code does can b
 
 * Start by finding a partner.
 * Spend five minutes reading the rest of this lesson plan.
-* Spend twenty minutes commenting (in code) on your partner's project.
+* Spend twenty minutes leaving `//code comments` on your partner's project.
   - Fork and clone your partner's project.
   - Leave your code comments on a new `refactoring` branch.
   - When you're done, push the branch up to your forked repo and make a pull request to your partner's repo.
