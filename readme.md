@@ -1,9 +1,4 @@
-# Refactoring
-
-## Learning Objectives
-
-- Define refactoring, and give an example of something that seems like refactoring but isn't.
-- Identify code "smells" indicating things that can be refactored.
+# Refactoring Your First Project
 
 ## Framing
 
@@ -11,19 +6,32 @@ Refactoring is the process of changing existing code without changing what it do
 
 Today you'll be refactoring code you've already written. The code functions. It may not do exactly what you'd originally intended to do, but it functions.
 
-**Refactoring != Fixing** 
+**Refactoring != Fixing**
 
 **Challenge yourself to not change what your code does!** This will be really hard to avoid. But when you start changing the result of your code, it's a very slippery slope.
 
 In the Industry, there will be many times when changing what the code does can break all sorts of things. Forcing yourself to stay within the scope of existing code will be important.
 
+## This Morning You Will...
+
+* Start by finding a partner.
+* Spend five minutes reading the rest of this lesson plan.
+* Spend twenty minutes leaving `//code comments` on your partner's project.
+  - Fork and clone your partner's project.
+  - Leave your code comments on a new `refactoring` branch.
+  - When you're done, push the branch up to your forked repo and make a pull request to your partner's repo.
+* Spend ten minutes talking with your partner about the code comments you both made.
+* Spend the remaining time beginning to refactor your own project using your partner's comments.
+
+-----
+
 ## Always Sniff Your Code
 
 A "code smell" is a pattern in code that allows the code to function, but is not good practice.
 
-### Does a particular line of code repeat several times with only minor changes? 
+### Does a particular line of code repeat several times with only minor changes?
 
-Example: 
+Example:
 
 ```js
 function sayHiToAlice(){
@@ -68,7 +76,7 @@ people.forEach(function(person){
 
 ### Do several variable names or function names share the same word?
 
-Example: 
+Example:
 
 ```js
 var gameCards = [];
